@@ -338,10 +338,12 @@ public class PlayerController : MonoBehaviour
 
     void LateUpdate()
     {
+        /*
         if (mExternalMovement != Vector3.zero)
         {
             _characterController.Move(mExternalMovement);
         }
+        */
     }
 
     // Update is called once per frame
@@ -389,6 +391,7 @@ public class PlayerController : MonoBehaviour
 
         transform.Rotate(0, turnAmount * RotationSpeed * Time.deltaTime, 0);
 
+        /*
         if (_characterController.isGrounded || mExternalMovement != Vector3.zero)
         {
             _moveDirection = transform.forward * move.magnitude;
@@ -411,11 +414,12 @@ public class PlayerController : MonoBehaviour
         {
             Gravity = 20.0f;
         }
-
+        
 
         _moveDirection.y -= Gravity * Time.deltaTime;
 
         _characterController.Move(_moveDirection * Time.deltaTime);
+        */
     }
 
 }
